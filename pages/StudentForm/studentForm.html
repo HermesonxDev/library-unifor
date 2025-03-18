@@ -25,8 +25,78 @@
             </div>
         </div>
 
-        <div class="">
-            teste
+        <div class="content">
+            <form class="form" id="form">
+                <h1>Cadastro de Aluno</h1>
+                
+                <div class="fields">
+                    <div class="input-group">
+                        <label>Nome</label>
+                        <input
+                            type="text"
+                            id="first_name"
+                            name="first_name"
+                            placeholder="Digite o Nome"
+                            required
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <label>Sobrenome</label>
+                        <input
+                            type="text"
+                            id="last_name"
+                            name="last_name"
+                            placeholder="Digite o Sobrenome"
+                            required
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <label>Idade</label>
+                        <input
+                            type="date"
+                            id="age"
+                            name="age"
+                            required
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="Digite o Email"
+                            required
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <label>ID Estudante</label>
+                        <input
+                            type="text"
+                            id="studentID"
+                            name="studentID"
+                            placeholder="Digite o ID da Instituição do Estudante"
+                            required
+                        />
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button
+                        type="submit"
+                        class="confirm"
+                    >Confirmar</button>
+                    
+                    <button
+                        type="button"
+                        class="cancel"
+                    >Cancelar</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>

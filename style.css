@@ -42,6 +42,11 @@ h1 {
     outline: none;
 }
 
+.input-group input::placeholder {
+    color: white;
+    opacity: .7;
+}
+
 .input-group input:focus {
     border-bottom-color: white;
 }
