@@ -1,3 +1,14 @@
+function checkAuth() {
+  const sessionToken = localStorage.getItem("sessionToken");
+
+  if (!sessionToken) {
+      alert("Você precisa estar logado para acessar esta página!");
+      window.location.href = "../../index.html";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", checkAuth);
+
 document.addEventListener("DOMContentLoaded", () => {
     const URL = "https://parseapi.back4app.com/classes/book"
     const appID = "dsXRH32IrxyIhRfTIxk4T3ungfOB6uVG2NHpMlxH"

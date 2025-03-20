@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    background-color: #454D6B;
+    color: white;
+}
+
+.form {
+    margin: auto;
+    width: 40%;
+    height: 70%;
+    background: #353B50;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form h1 {
+    margin: 0 auto;
+}
+
+.fields {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group label {
+    font-size: 20px;
+}
+
+.input-group input, .input-group select {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid gray;
+    padding: 5px;
+    color: white;
+    outline: none;
+    width: 75%;
+}
+
+.input-group select option {
+    color: gray;
+}
+
+.input-group input::placeholder {
+    color: white;
+}
+
+.input-group input:focus {
+    border-bottom-color: white;
+}
+
+.buttons {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons button {
+    color: white;
+    padding: 10px 50px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.buttons button:hover {
+    opacity: .7;
+}
+
+.confirm {
+    background-color: green;
+}
+
+.cancel {
+    background-color: red;
+}

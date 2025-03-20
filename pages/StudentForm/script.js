@@ -1,8 +1,19 @@
+function checkAuth() {
+  const sessionToken = localStorage.getItem("sessionToken");
+
+  if (!sessionToken) {
+      alert("Você precisa estar logado para acessar esta página!");
+      window.location.href = "../../index.html";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", checkAuth);
+
 document.addEventListener("DOMContentLoaded", () => {
     const URL = "https://parseapi.back4app.com/classes/student"
     const appID = "dsXRH32IrxyIhRfTIxk4T3ungfOB6uVG2NHpMlxH"
     const restApiKEY = "T5ZD4E76TcCBCVBNakQTBx95gOptq4hhS7zBmrYk"
-    
+
     const form = document.getElementById("form")
 
     form.addEventListener("submit", (event) => {

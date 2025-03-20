@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Livro</title>
+    <title>Cadastro de Aluguel</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../assets/css/Global.css">
     <script src="script.js"></script>
@@ -27,48 +27,47 @@
 
         <div class="content">
             <form class="form" id="form">
-                <h1>Cadastro de Livro</h1>
+                <h1>Cadastro de Aluguel</h1>
                 
                 <div class="fields">
                     <div class="input-group">
-                        <label>Nome</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Digite o Nome"
+                        <label>Livro</label>
+                        <select
+                            id="book"
+                            name="book"
                             required
-                        />
+                        >
+                            <option>Selecione um Livro</option>
+                        </select>
                     </div>
 
                     <div class="input-group">
-                        <label>Author</label>
-                        <input
-                            type="text"
-                            id="author"
-                            name="author"
-                            placeholder="Digite o Autor"
+                        <label>Locatario</label>
+                        <select
+                            id="who_rented"
+                            name="who_rented"
                             required
-                        />
+                        >
+                            <option>Selecione um Estudante</option>
+                        </select>
                     </div>
 
                     <div class="input-group">
-                        <label>Data de Lançamento</label>
+                        <label>Data do Aluguel</label>
                         <input
                             type="date"
-                            id="release_date"
-                            name="release_date"
+                            id="rental_date"
+                            name="rental_date"
                             required
                         />
                     </div>
 
                     <div class="input-group">
-                        <label>ID Interno</label>
+                        <label>Data de Retorno</label>
                         <input
-                            type="text"
-                            id="internal_id"
-                            name="internal_id"
-                            placeholder="Digite o ID Interno do Livro"
+                            type="date"
+                            id="return_date"
+                            name="return_date"
                             required
                         />
                     </div>
