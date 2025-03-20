@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Aluno</title>
+    <title>Cadastro de Livro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../../assets/css/Global.css">
     <script src="script.js"></script>
@@ -14,8 +14,8 @@
             <div class="links">
                 <a href="../StudentForm/studentForm.html" class="nav-link">Cadastrar Aluno</a>
                 <a href="../StudentList/studentList.html" class="nav-link">Listar Alunos</a>
-                <a href="../BookForm/bookForm.html" class="nav-link">Cadastrar Livro</a>
-                <a href="../BookList/bookList.html" class="nav-link">Listar Livros</a>
+                <a href="../BookForm/BookForm.html" class="nav-link">Cadastrar Livro</a>
+                <a href="#" class="nav-link">Listar Livros</a>
                 <a href="#" class="nav-link">Cadastrar Aluguel de Livro</a>
                 <a href="#" class="nav-link">Listar Livros Alugados</a>
             </div>
@@ -27,59 +27,48 @@
 
         <div class="content">
             <form class="form" id="form">
-                <h1>Cadastro de Aluno</h1>
+                <h1>Cadastro de Livro</h1>
                 
                 <div class="fields">
                     <div class="input-group">
                         <label>Nome</label>
                         <input
                             type="text"
-                            id="first_name"
-                            name="first_name"
+                            id="name"
+                            name="name"
                             placeholder="Digite o Nome"
                             required
                         />
                     </div>
 
                     <div class="input-group">
-                        <label>Sobrenome</label>
+                        <label>Author</label>
                         <input
                             type="text"
-                            id="last_name"
-                            name="last_name"
-                            placeholder="Digite o Sobrenome"
+                            id="author"
+                            name="author"
+                            placeholder="Digite o Autor"
                             required
                         />
                     </div>
 
                     <div class="input-group">
-                        <label>Idade</label>
+                        <label>Data de Lançamento</label>
                         <input
                             type="date"
-                            id="age"
-                            name="age"
+                            id="release_date"
+                            name="release_date"
                             required
                         />
                     </div>
 
                     <div class="input-group">
-                        <label>Email</label>
+                        <label>ID Interno</label>
                         <input
                             type="text"
-                            id="email"
-                            name="email"
-                            placeholder="Digite o Email"
-                            required
-                        />
-                    </div>
-
-                    <div class="input-group">
-                        <label>ID Estudante</label>
-                        <input
-                            type="text"
-                            id="studentID"
-                            name="studentID"
-                            placeholder="Digite o ID da Instituição do Estudante"
+                            id="internal_id"
+                            name="internal_id"
+                            placeholder="Digite o ID Interno do Livro"
                             required
                         />
                     </div>

@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_URL = "https://parseapi.back4app.com/classes/student"
+  const API_URL = "https://parseapi.back4app.com/classes/book"
   const APP_ID = "dsXRH32IrxyIhRfTIxk4T3ungfOB6uVG2NHpMlxH"
   const REST_API_KEY = "T5ZD4E76TcCBCVBNakQTBx95gOptq4hhS7zBmrYk"
   
-  loadingStudents();
+  loadingBooks();
 
-  async function loadingStudents() {
+  async function loadingBooks() {
     try {
       const response = await fetch(API_URL, {
         method: "GET",
@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const data = await response.json();
-      showStudents(data.results);
+      showBooks(data.results);
     } catch (error) {
-      console.error("Erro ao buscar students:", error);
+      console.error("Erro ao buscar livros:", error);
     }
   }
 
-  function showStudents(students) {
+  function showBooks(books) {
       const content = document.querySelector(".content");
       content.innerHTML = "";
 
@@ -30,33 +30,31 @@ document.addEventListener("DOMContentLoaded", () => {
       container.classList.add("table-container");
 
       const title = document.createElement("h2");
-      title.textContent = "Lista de Alunos";
+      title.textContent = "Lista de Livros";
       container.appendChild(title);
 
-      if (!students || students.length === 0) {
+      if (!books || books.length === 0) {
           const noAlunos = document.createElement("p");
-          noAlunos.textContent = "Nenhum Aluno encontrado.";
+          noAlunos.textContent = "Nenhum Livro encontrado.";
           container.appendChild(noAlunos);
       } else {
           const table = document.createElement("table");
           table.innerHTML = `
             <tr>
               <th>Nome</th>
-              <th>Sobrenome</th>
-              <th>Idade</th>
-              <th>Email</th>
-              <th>ID do Estudante</th>
+              <th>Autor</th>
+              <th>Data de Lançamento</th>
+              <th>ID Interno</th>
             </tr>
           `;
 
-          students.forEach(student => {
+          books.forEach(book => {
               const row = document.createElement("tr");
               row.innerHTML = `
-                <td>${student.first_name || "N/A"}</td>
-                <td>${student.last_name || "N/A"}</td>
-                <td>${student.age || "N/A"}</td>
-                <td>${student.email || "N/A"}</td>
-                <td>${student.studantID || "N/A"}</td>
+                <td>${book.name || "N/A"}</td>
+                <td>${book.author || "N/A"}</td>
+                <td>${book.release_date || "N/A"}</td>
+                <td>${book.internal_id || "N/A"}</td>
               `;
               table.appendChild(row);
           });
